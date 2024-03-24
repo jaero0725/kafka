@@ -21,6 +21,16 @@
 
 | 챕터     | 발표자                                                                       | 발표 자료 |
 |--------|---------------------------------------------------------------------------|-------|
-| 03장(1) | [1](https://github.com/jaero0725) | [자료](https://github.com/)
-| 03장(2) | [2](https://github.com/jaero0725) | [자료](https://github.com/)
+| 03장(1) 카프카 기본개념구조| [1](https://github.com/jaero0725) | [자료](https://github.com/)
+| 03장(2) 카프카 기본개념구조| [2](https://github.com/jaero0725) | [자료](https://github.com/)
+| 04장(1) 카프카의 내부 동작원리와 구현| [1](https://github.com/jaero0725) | [자료](https://github.com/)
+| 04장(2) 카프카의 내부 동작원리와 구현| [2](https://github.com/jaero0725) | [자료](https://github.com/)
+| 05장(1) 프로듀서의 내부 동작 원리와 구현| [1](https://github.com/jaero0725) | [자료](https://github.com/)
+| 05장(2) 프로듀서의 내부 동작 원리와 구현| [2](https://github.com/jaero0725) | [자료](https://github.com/)
+| 06장(1) 컨슈머의 내부 동작 원리와 구현| [1](https://github.com/jaero0725) | [자료](https://github.com/)
+| 06장(2) 컨슈머의 내부 동작 원리와 구현| [2](https://github.com/jaero0725) | [자료](https://github.com/)
+| 07장(1) 카프카 운영과 모니터링| [1](https://github.com/jaero0725) | [자료](https://github.com/)
+| 07장(2) 카프카 운영과 모니터링| [2](https://github.com/jaero0725) | [자료](https://github.com/)
+| 08장(1) 카프카 버전 업그레이드와 확장| [2](https://github.com/jaero0725) | [자료](https://github.com/)
+| 08장(2) 카프카 버전 업그레이드와 확장| [2](https://github.com/jaero0725) | [자료](https://github.com/)
 
