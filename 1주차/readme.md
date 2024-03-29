@@ -65,10 +65,33 @@ ProducerRecord는 전송하기 위한 실제 데이터로, 토픽, 파티션, �
 - 동기(메시지 보내고 ACK 기다리기)
 - 비동기(메시지 보내고 ACK 안기다리고 자기 할일하기. 근데 ACK을 받긴함.)
 
+[메시지 보내고 확인하지 않기](https://github.com/onlybooks/kafka2/blob/main/chapter3/src/main/java/ProducerFireForgot.java)
+
+[동기식 메시지 전송](https://github.com/onlybooks/kafka2/blob/main/chapter3/src/main/java/ProducerSync.java)
+
+[비동기를 위한 콜백](https://github.com/onlybooks/kafka2/blob/main/chapter3/src/main/java/PeterProducerCallback.java)
+
+[비동기식 메시지 전송](https://github.com/onlybooks/kafka2/blob/main/chapter3/src/main/java/ProducerAsync.java)
 
 
+### 컨슈머의 기본동작
+컨슈머는 카프카의 토픽에 저장되어 있는 메시지를 가져오는 역할입니다. 단순 메시지 뿐만 아니라 내부적으로는 컨슈머 그룹, 리밸런싱 등 여러 동작을 수행합니다. 
 
+프로듀서가 카프카의 토픽으로 메시지를 전송하면 해당 메시지들은 브로커들의 로컬디스크에 저장됩니다. 우리는 컨슈머를 이용해 토픽에 저장된 메시지를 가져올 수 있습니다. 컨슈머 그룹은 하나 이상의 컨슈머들이 모여있는 그룹을 의미하고, 컨슈머는 반드시 컨슈머 그룹에 속하게 됩니다. (그룹내 어떤 한 컨슈머가 문제 발생시 대신 역할 수행가능)
+그리고 이 컨슈머 그룹은 각 파티션의 리더에게 카프카 토픽에 저장된 메시지를 가져오기 위한 요청을 보냅니다. 파티션의 수와 컨슈머는 이때 일대일로 맵핑되는게 이상적입니다. 
 
+### 컨슈머의 동작 방식
+컨슈머의 메시지 가져오는 방식은 크게 3가지가 있습니다.
+- 오터커밋
+- 동기 가져오기
+- 비동기 가져오기
 
+[오터커밋](https://github.com/onlybooks/kafka2/blob/main/chapter3/src/main/java/ConsumerAuto.java)
 
+[동기 가져오기](https://github.com/onlybooks/kafka2/blob/main/chapter3/src/main/java/ConsumerSync.java)
 
+[비동기 가져오기](https://github.com/onlybooks/kafka2/blob/main/chapter3/src/main/java/ConsumerAsync.java)
+
+비동기 컨슈머의 차이점은 실패하더래도 재시도를 하지 않는 것입니다. 
+
+오프셋 2000번째를 진행중에 오프셋 3번이 실패하여 재시도를 하게 되면 다시 반복하게 되기때문입니다. 하지만 재시도를 안하더래도 그렇게 해도 네트워크 지연때문에 오프셋이 바뀔수도있다고합니다.
